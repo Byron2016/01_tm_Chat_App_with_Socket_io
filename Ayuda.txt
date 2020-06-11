@@ -1,0 +1,152 @@
+    ***************************************************************
+    **                                                           **
+    **             01_jqq_Chat_App_with_Socket_io                **
+    **                                                           **
+    ***************************************************************
+- 01_jqq_Chat_App_with_Socket_io
+	- TITULO: Design and Build a Chat App with Socket.io
+	- REFERENCIAS
+		- https://www.youtube.com/watch?v=-0j_9LqsOkQ&list=PLDlWc9AfQBfbyGwhSlxg16mQGpGnauCwq
+		
+	- PASOS
+		- DEBUGING
+			- Debugging JavaScript (Google Chrome and Visual Studio Code)
+				- https://www.youtube.com/watch?v=AX7uybwukkk
+				- https://code.visualstudio.com/docs/editor/debugging#_launch-configurations
+				- EXTENSIONES
+					- Debugger for Chrome
+					- Configuración
+						- Ir a Run
+						- Seleccionar "Add Configuration"
+						- Seleccionar Chrome
+						- Poner servidor a: 
+						- "url": "http://localhost:3000",
+						- "webRoot": "${workspaceFolder}/public"
+					
+				- CHROME
+					- 
+				- VS CODE
+					- Colocar
+						- console.log("....");
+						- debugger;
+				- RECHAZÓ CONEXION
+					- 
+
+		- SERVIDOR NODE
+			- npm init
+			- npm i --save express socket.io
+			- npm i --save nodemon
+			- npm i -g nodemon
+			- Crear server.js 
+				const express = require("express");
+				const app = express();
+				const path = require("path");
+
+				//Serve the public directory
+				app.use(express.static(path.join(__dirname, "public")));
+
+				app.get("/", (req, res) => {
+				  res.sendFile(path.join(__dirname, +"public/index.html"));
+				});
+
+				app.listen(3000, () => {
+				  console.log("Listening on port 3000");
+				});
+			-Ejecutar el servidor
+				- node server.js 
+				- nodemon server.js 
+
+
+
+
+
+		- The best products start with Sketch
+			- https://www.sketch.com/
+			-  
+
+		- Snippets
+			- settings
+			- Use Snippets
+			- Seleccionar javascript
+				"Get Element by id": {
+				   "prefix": "getid",
+				   "body": "const $1 = document.getElementById('$1');\n$0",
+				   "description": "Gets DOM element by id"
+			    }
+				
+				
+		- Mejorar rendimiento en VSC
+			- https://www.youtube.com/watch?v=Ijz_TOyDnAk
+			- ShortCuts
+				- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+			- Layout
+				- Mover las ventanas q no necesitas o si necesitas.
+			- Customization
+				- Layout
+				- short cuts
+				- 
+			- EXTENSIONES
+				- Live Server
+			
+			- Snippets
+				- 
+			- Automating Formating
+				- Prettier
+				- ESLint
+				- TSLint
+				- 
+				
+		- Awesome Visual Studio Code Extensions for Writing HTML
+			- https://www.youtube.com/watch?v=Z5RkLrSDlFA
+			- Emmet
+			- Auto Close Tag (Jun Hung)
+			- Auto Rename Tag (Jun Hung)
+			- html tag wrapper
+				- Crtl I
+			- Live Server (Static websides)
+			-
+		- 15 VS Code Extensions For Front-End Developers in 2019
+			- https://www.youtube.com/watch?v=LdF2RcelRg0
+			- Live Server (Ritwick Dey)
+			- HTML CSS SUPPORT (ecmel)
+			- Auto Rename Tag
+			- Prettier . Code Formatter (Estben Petersen)
+				- 
+			- JavaScript (ES6)code Snippets (Charalarrpos Kaypids)
+			- Turbo Console Log (ChakrouAnas)
+			- Indent-rainbow (oderwat)
+			- Bracket Pair Colorizer (CoeYaadS)
+			- Code Spell checker (Street Side Software)
+			- Rest Client (Huachao Mao)
+			- GitLens - Git supercharged (Eric Amodio)
+			- Auto-Open Markdown Previe (hnw)
+			- ES7 React/Redux/Graph!L/React-Native snippets
+			- Vetur (Pine WU)
+			
+				
+
+
+live server extension settings
+
+{
+  "workbench.iconTheme": "vscode-icons",
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.zoomLevel": -1,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "liveServer.settings.host": "localhost",
+  "liveServer.settings.multiRootWorkspaceName": "",
+"liveServer.settings.port": 3000,
+"liveServer.settings.proxy": {
+
+}
+}
+
+.vscode
